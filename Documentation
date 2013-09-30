@@ -1,7 +1,41 @@
 Any specification?
 
+na poczatek:
+- 1 poziom
+- poruszanie sie
+- grafika - moze na poczatku komorki o jednakowym kolorze - zobaczymy
+- dostosowanie ilosci pol w zaleznosci od szerokosci i wysokosci ekranu
+- 1 krok
+- phonegap (ostatni etap)
+
+dalsze prace:
+- wiele poziomow
+- scenariusz? :)
+- grafiki - najprawdopodobniej trzeba bedzie je dostosowac lub narysowac wlasne
+- generowanie poziomow
+- wybor postaci
+- menu
+- load/save?
+- grupa potworow - statystyki - specyfikacja potworow w json
+- poruszanie - klikniecie na dane pole
+
 Functional equirements:
+- swiat gry to macierz
+- kazda macierz to osobny poziom
+- na poczatku mapa importowana z bitmapy, pozniej generowana
+- wrogie generowani przy starcie poziomu
+- schody w gore/w dol
+- mozliwosc poruszania sie w gore/w dol/lewo/prawo
+- "wejscie na wroga" oznacza atak i wymiane ciosow
+
 Non-functional requirements:
 
 Maybe some sort of graphical mockup?
+
 Links to similar projects (GUI, etc)?
+http://pixeldungeon.watabou.ru/
+http://crawl.develz.org/wordpress/screenshots
+http://www.nethack.org/
+http://pl.wikipedia.org/wiki/NetHack
+http://pl.wikipedia.org/wiki/Roguelike
+http://te4.org/
