@@ -1,14 +1,20 @@
+// maps elements colors
+var wall='#d0c5ad';  //x
+var floor='#704b41';  //f
+var water='#5d71a0';   //w
+var enemy='#c60411';  //e
+
 var map = [
-    ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
-    ['x', 'x', 'o', 'x', 'o', 'o', 'o', 'o', 'x', 'x'],
-    ['x', 'o', 'o', 'x', 'o', 'o', 'x', 'o', 'x', 'x'],
-    ['x', 'o', 'x', 'o', 'o', 'o', 'x', 'o', 'x', 'x'],
-    ['x', 'o', 'o', 'o', 'x', 'x', 'x', 'o', 'x', 'x'],
-    ['x', 'x', 'x', 'o', 'x', 'x', 'x', 'o', 'x', 'x'],
-    ['x', 'o', 'o', 'o', 'x', 'x', 'o', 'o', 'o', 'x'],
-    ['x', 'x', 'x', 'o', 'x', 'x', 'o', 'x', 'o', 'x'],
-    ['x', 'x', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'x'],
-    ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x']
+    ['x', 'f', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x'],
+    ['x', 'f', 'f', 'e', 'f', 'f', 'f', 'f', 'e', 'x'],
+    ['x', 'f', 'f', 'f', 'x', 'f', 'x', 'e', 'f', 'x'],
+    ['x', 'f', 'f', 'x', 'x', 'f', 'x', 'x', 'f', 'x'],
+    ['x', 'e', 'f', 'f', 'f', 'f', 'f', 'x', 'f', 'x'],
+    ['x', 'w', 'w', 'f', 'f', 'f', 'e', 'f', 'f', 'x'],
+    ['x', 'w', 'f', 'x', 'f', 'x', 'x', 'x', 'f', 'x'],
+    ['x', 'w', 'f', 'x', 'f', 'f', 'f', 'x', 'f', 'x'],
+    ['x', 'f', 'f', 'x', 'f', 'f', 'f', 'x', 'f', 'x'],
+    ['x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', 'f', 'x']
 ];
 
 // player's position
@@ -59,10 +65,14 @@ function draw_map(c, map, size, gap) {
     var color;
     for (var i = 0; i < map[0].length; ++i) {
         for (var j = 0; j < map[0].length; ++j) {
-            if (map[i][j] === 'o') {
-                color = '#FF0000';
-            } else if (map[i][j] === 'x') {
-                color = '#0000FF';
+            if (map1[i][j] === 'x') {
+                color = wall;
+            } else if (map1[i][j] === 'w') {
+                color = water;
+            } else if (map1[i][j] === 'f') {
+                color = floor;
+            } else if (map1[i][j] === 'e') {
+                color = enemy;
             }
             var ctx = c.getContext("2d");
             ctx.fillStyle = color;
