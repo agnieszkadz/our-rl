@@ -65,13 +65,13 @@ function draw_map(c, map, size, gap) {
     var color;
     for (var i = 0; i < map[0].length; ++i) {
         for (var j = 0; j < map[0].length; ++j) {
-            if (map1[i][j] === 'x') {
+            if (map[i][j] === 'x') {
                 color = wall;
-            } else if (map1[i][j] === 'w') {
+            } else if (map[i][j] === 'w') {
                 color = water;
-            } else if (map1[i][j] === 'f') {
+            } else if (map[i][j] === 'f') {
                 color = floor;
-            } else if (map1[i][j] === 'e') {
+            } else if (map[i][j] === 'e') {
                 color = enemy;
             }
             var ctx = c.getContext("2d");
@@ -92,25 +92,25 @@ function check(e) {
     console.log(e.keyCode);
     // 38 up
     if (e.keyCode === 38) {
-        if (map[player.x][player.y - 1] !== 'o') {
+        if (map[player.x][player.y - 1] === 'x') {
             return;
         }
         player.y = player.y - 1;
         // 37 left
     } else if (e.keyCode === 37) {
-        if (map[player.x - 1][player.y] !== 'o') {
+        if (map[player.x - 1][player.y] === 'x') {
             return;
         }
         player.x = player.x - 1;
         // 39 right
     } else if (e.keyCode === 39) {
-        if (map[player.x + 1][player.y] !== 'o') {
+        if (map[player.x + 1][player.y] === 'x') {
             return;
         }
         player.x = player.x + 1;
         // 40 down
     } else if (e.keyCode === 40) {
-        if (map[player.x][player.y + 1] !== 'o') {
+        if (map[player.x][player.y + 1] === 'x') {
             return;
         }
         player.y = player.y + 1;
